@@ -1,0 +1,14 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "automerge": true,
+    "platformAutomerge": true,
+    "customManagers": [
+        {
+            "customType": "regex",
+            "fileMatch": ["^Dockerfile$"],
+            "matchStrings": ["ARG VERSION=(?<currentValue>\\S+)"],
+            "datasourceTemplate": "github-releases",
+            "depNameTemplate": "badaix/snapcast"
+        }
+    ]
+}
